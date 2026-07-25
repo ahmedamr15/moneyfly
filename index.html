@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MoneyFly — Your whole financial life, in one calm place</title>
+  <meta name="description" content="MoneyFly is a premium, on-device-first personal finance app for iPhone. Track accounts, cards, installments, savings, gold and Zakat, split bills with friends, and turn bank SMS into transactions automatically — beautifully and privately." />
+  <meta name="theme-color" content="#070A14" />
+  <link rel="icon" type="image/png" href="assets/icon.png" />
+  <link rel="apple-touch-icon" href="assets/icon.png" />
+  <link rel="canonical" href="https://moneyfly.app/" />
+
+  <!-- Open Graph / social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="MoneyFly — Your whole financial life, in one calm place" />
+  <meta property="og:description" content="Accounts, cards, installments, savings, gold and Zakat — one beautiful, private home for your money. On-device first. Made for Egypt & the region." />
+  <meta property="og:image" content="assets/dashboard.jpg" />
+  <meta property="og:url" content="https://moneyfly.app/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MoneyFly — Your whole financial life, in one calm place" />
+  <meta name="twitter:description" content="A premium, on-device-first personal finance app for iPhone." />
+  <meta name="twitter:image" content="assets/dashboard.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav">
+    <div class="container">
+      <a href="index.html" class="brand" aria-label="MoneyFly home">
+        <img src="assets/icon.png" alt="MoneyFly app icon" />
+        <span>Money<b>Fly</b></span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#features">Features</a>
+        <a href="#screens">Screens</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#pricing">Pricing</a>
+        <a href="support.html">Support</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="#download" class="btn btn-primary">Download</a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">On-device first · No ads · Private by design</span>
+        <h1 class="h-display">Your whole financial life,<br /><span class="serif grad-text">in one calm place.</span></h1>
+        <p class="lead">Accounts, credit cards, installments, savings, gold and Zakat — all in one beautiful home for your money. MoneyFly turns bank SMS into transactions, splits bills without the awkward math, and keeps your data on your phone.</p>
+        <div class="hero-cta" id="download">
+          <a href="https://apps.apple.com/app/moneyfly/id0000000000" class="appstore-badge" aria-label="Download MoneyFly on the App Store">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 12.54c-.02-2.06 1.68-3.05 1.76-3.1-0.96-1.4-2.45-1.6-2.98-1.62-1.27-.13-2.48.75-3.12.75-.64 0-1.64-.73-2.7-.71-1.39.02-2.67.81-3.38 2.05-1.44 2.5-.37 6.2 1.03 8.23.69.99 1.51 2.11 2.58 2.07 1.04-.04 1.43-.67 2.69-.67 1.25 0 1.61.67 2.7.65 1.12-.02 1.82-1.01 2.5-2.01.79-1.15 1.11-2.27 1.13-2.32-.02-.01-2.17-.83-2.19-3.29zM15.0 6.86c.57-.69.95-1.65.85-2.61-.82.03-1.81.55-2.4 1.24-.53.61-.99 1.58-.87 2.51.91.07 1.85-.46 2.42-1.14z"/></svg>
+            <span><span class="small">Download on the</span><span class="big">App Store</span></span>
+          </a>
+          <a href="#features" class="btn btn-ghost btn-lg">See what's inside</a>
+        </div>
+        <div class="hero-trust">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Bank-grade privacy</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg> No bank login required</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 100 20 10 10 0 000-20z"/><path d="M8 12h8"/></svg> No ads, ever</span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="phone-crop hero-shot">
+          <img src="assets/dashboard.jpg" alt="MoneyFly dashboard showing net position, quick actions and today's briefing" width="1290" height="2796" fetchpriority="high" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRUST STRIP ============ -->
+  <section class="trust-strip">
+    <div class="container">
+      <div class="trust-item reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M12 18h.01"/></svg></div>
+        <div><h4>On-device first</h4><p>Your financial data is stored and encrypted on your iPhone — not on our servers.</p></div>
+      </div>
+      <div class="trust-item reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v12H5.17L4 17.17V4z"/><path d="M8 9h8M8 12h5"/></svg></div>
+        <div><h4>SMS, done for you</h4><p>Bank alerts become clean transactions automatically. No manual typing.</p></div>
+      </div>
+      <div class="trust-item reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></div>
+        <div><h4>Split without stress</h4><p>Share group bills and see exactly who owes whom — no awkward chasing.</p></div>
+      </div>
+      <div class="trust-item reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5L12 21.5 7.1 18.2l.9-5.5-4-3.9L9.5 8z"/></svg></div>
+        <div><h4>Made for the region</h4><p>EGP-first, multi-currency, gold tracking and a built-in Zakat calculator.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURE GRID ============ -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Everything, in one place</span>
+        <h2 class="h-section">One app for your entire money life</h2>
+        <p class="lead">MoneyFly brings the pieces most people juggle across banking apps, spreadsheets and notes into a single, calm interface.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card reveal">
+          <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v12H5.17L4 17.17V4z"/><path d="M8 9h8M8 12h5"/></svg></div>
+          <h3>SMS automation</h3>
+          <p>Stop losing bank SMS. MoneyFly reads alerts on-device and files each one as a categorized transaction, so your balances stay current with zero effort.</p>
+        </article>
+        <article class="feature-card fc-blue reveal">
+          <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 20c0-3.3 3-5 6.5-5s6.5 1.7 6.5 5"/><circle cx="17.5" cy="9" r="2.6"/><path d="M16 15.2c3 .3 5.5 1.9 5.5 4.8"/></svg></div>
+          <h3>Split Wisely</h3>
+          <p>Share group expenses for trips, dinners and flatmates. See who owes whom at a glance and send a friendly reminder — the math is handled for you.</p>
+        </article>
+        <article class="feature-card fc-gold reveal">
+          <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="3"/><path d="M2.5 10h19"/><path d="M6 15h4"/></svg></div>
+          <h3>Cards & installments</h3>
+          <p>Statements, limits, due dates and installment plans for every credit card — finally clear in one view, with reminders before anything is due.</p>
+        </article>
+        <article class="feature-card reveal">
+          <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg></div>
+          <h3>Zakat calculator</h3>
+          <p>Track your Hawl and nisab and know your Zakat to the pound. A respectful aid for your obligations — accurate, private and never preachy.</p>
+        </article>
+        <article class="feature-card fc-violet reveal">
+          <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v2M12 19v2M5 12H3M21 12h-2M6 6l1.5 1.5M16.5 16.5L18 18M18 6l-1.5 1.5M7.5 16.5L6 18"/><circle cx="12" cy="12" r="3.2"/></svg></div>
+          <h3>AI insights & briefings</h3>
+          <p>A daily briefing tells you where your money is going, flags unusual spending, and shows how much you're on track to save this month.</p>
+        </article>
+        <article class="feature-card reveal">
+          <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h7v7H3zM14 3h7v4h-7zM14 11h7v10h-7zM3 14h7v7H3z"/></svg></div>
+          <h3>Net-worth dashboard</h3>
+          <p>Accounts, gold, savings and goals combined into one live net-worth number, so you always know where you actually stand.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ALTERNATING FEATURE ROWS ============ -->
+  <section class="section section--tight">
+    <div class="container">
+
+      <div class="feat-row reveal">
+        <div class="feat-copy">
+          <span class="eyebrow">SMS automation</span>
+          <h3>Every bank alert, filed for you.</h3>
+          <p>The moment a bank SMS lands, MoneyFly reads it on your device and turns it into a clean, categorized transaction — merchant, amount, account and all.</p>
+          <ul class="feat-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg> Processed entirely on-device — nothing is sent to our servers</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg> Smart categories that learn the shops and services you use</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg> Review and confirm in a tap — you're always in control</li>
+          </ul>
+        </div>
+        <div class="feat-media">
+          <div class="phone-crop"><img src="assets/sms.jpg" alt="MoneyFly turning a bank SMS into a categorized transaction" loading="lazy" width="1290" height="2796" /></div>
+        </div>
+      </div>
+
+      <div class="feat-row reverse reveal">
+        <div class="feat-copy">
+          <span class="eyebrow eyebrow--blue">Split Wisely</span>
+          <h3>Split bills. Settle up. No awkward math.</h3>
+          <p>Create a group for the trip, the dinner or the flat. Add who paid what, and MoneyFly shows exactly who owes whom — then lets you nudge them, kindly.</p>
+          <ul class="feat-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg> Balanced settlements — the fewest payments to clear everyone</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg> Friendly reminders you can send with one tap</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg> Optional — only Split Wisely uses the cloud, and only if you invite others</li>
+          </ul>
+        </div>
+        <div class="feat-media">
+          <div class="phone-crop"><img src="assets/split.jpg" alt="Split Wisely group showing balances and who owes whom" loading="lazy" width="1290" height="2796" /></div>
+        </div>
+      </div>
+
+      <div class="feat-row reveal">
+        <div class="feat-copy">
+          <span class="eyebrow eyebrow--gold">Cards & installments</span>
+          <h3>Your cards, finally clear.</h3>
+          <p>Bring every credit card into one view — statement balances, credit limits, due dates and running installment plans — and never be surprised by a payment again.</p>
+          <ul class="feat-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg> Statement cycles, minimum due and available credit at a glance</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg> Installment tracking so you always know what's left to pay</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg> Smart reminders before every due date</li>
+          </ul>
+        </div>
+        <div class="feat-media">
+          <div class="phone-crop"><img src="assets/cards.jpg" alt="Credit card overview with statement, limit and installments" loading="lazy" width="1290" height="2796" /></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ SCREENSHOT GALLERY ============ -->
+  <section class="section section--tight" id="screens">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">A closer look</span>
+        <h2 class="h-section">Designed to feel calm, not clinical</h2>
+        <p class="lead">Every screen is built to make money feel clear and under control. Swipe through a few.</p>
+      </div>
+    </div>
+    <div class="gallery" role="list" aria-label="App screenshots">
+      <img role="listitem" src="assets/dashboard.jpg" alt="Dashboard — net position and today's briefing" loading="lazy" width="1290" height="2796" />
+      <img role="listitem" src="assets/sms.jpg" alt="SMS automation — bank alerts become transactions" loading="lazy" width="1290" height="2796" />
+      <img role="listitem" src="assets/split.jpg" alt="Split Wisely — group balances" loading="lazy" width="1290" height="2796" />
+      <img role="listitem" src="assets/insights.jpg" alt="AI insights — spending analysis" loading="lazy" width="1290" height="2796" />
+      <img role="listitem" src="assets/cards.jpg" alt="Credit cards — statements and installments" loading="lazy" width="1290" height="2796" />
+      <img role="listitem" src="assets/zakat.jpg" alt="Zakat calculator — Hawl and nisab tracking" loading="lazy" width="1290" height="2796" />
+    </div>
+    <p class="gallery-hint">Scroll to see more →</p>
+  </section>
+
+  <!-- ============ PRIVACY BAND ============ -->
+  <section class="section" id="privacy">
+    <div class="container">
+      <div class="privacy-band reveal">
+        <div class="privacy-grid">
+          <div>
+            <span class="eyebrow">Your money, your phone</span>
+            <h2 class="h-section" style="margin-top:16px;">Privacy isn't a setting.<br />It's the foundation.</h2>
+            <p class="lead" style="margin-top:16px;">MoneyFly was built on-device first. Your accounts, transactions and balances live encrypted on your iPhone. We never ask for your bank login, we don't sell data, and we never use your finances for advertising.</p>
+            <a href="privacy.html" class="btn btn-ghost" style="margin-top:24px;">Read our privacy policy
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+          <ul class="privacy-points">
+            <li>
+              <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg></div>
+              <div><h4>No bank credentials</h4><p>We never collect or store your bank logins or card numbers.</p></div>
+            </li>
+            <li>
+              <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M12 18h.01"/></svg></div>
+              <div><h4>SMS stays on-device</h4><p>Message content is parsed locally and never sent to our servers.</p></div>
+            </li>
+            <li>
+              <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M6 6l12 12"/></svg></div>
+              <div><h4>No selling, no ads</h4><p>Your financial data is never sold or used for advertising.</p></div>
+            </li>
+            <li>
+              <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14"/></svg></div>
+              <div><h4>Delete anytime</h4><p>Remove the app, or delete your Split Wisely account in-app in seconds.</p></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRICING ============ -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Simple, honest pricing</span>
+        <h2 class="h-section">Free to start. Pro when you're ready.</h2>
+        <p class="lead">Everything you need to get organized is free. Upgrade to Pro for unlimited tracking and the full power of MoneyFly.</p>
+      </div>
+
+      <div class="pricing-grid reveal">
+        <div class="price-card">
+          <h3>Free</h3>
+          <p class="sub">The essentials, forever.</p>
+          <div class="price-amount"><span class="amt">EGP&nbsp;0</span></div>
+          <p class="price-note">No card required</p>
+          <ul class="price-features">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg> Up to 2 accounts, 1 credit card &amp; 1 investment</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg> 50 SMS auto-imports each month</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg> 2 budgets &amp; 3 recurring templates</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg> Zakat, IOU tracking &amp; bill splitting</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg> Net-worth dashboard &amp; gold tracking</li>
+          </ul>
+          <a href="#download" class="btn btn-ghost">Get MoneyFly free</a>
+        </div>
+
+        <div class="price-card featured">
+          <span class="price-tag-pop">7-day free trial</span>
+          <h3>Pro</h3>
+          <p class="sub">The whole picture, unlimited.</p>
+          <div class="price-amount"><span class="amt">EGP&nbsp;149.99</span><span class="per">/ month</span></div>
+          <!-- TODO: replace price above and the annual note with the exact prices configured in App Store Connect. -->
+          <p class="price-note">or EGP&nbsp;999.99 / year — 7 days free</p>
+          <ul class="price-features">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg> <strong style="color:#fff">Unlimited</strong> accounts, cards &amp; investments</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg> Unlimited SMS auto-import, budgets &amp; recurring</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg> Full credit-card &amp; installment engine</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg> AI insights, briefings &amp; anomaly alerts</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg> Unlimited AI chat &amp; Split Wisely groups</li>
+          </ul>
+          <a href="#download" class="btn btn-primary">Start 7-day free trial</a>
+        </div>
+      </div>
+
+      <p class="price-disclosure">
+        MoneyFly Pro is an auto-renewing subscription. Payment is charged to your Apple Account at confirmation of purchase. The subscription renews automatically unless it is cancelled at least 24 hours before the end of the current period. Your account is charged for renewal within 24 hours before the end of the current period. You can manage or cancel your subscription in your Apple Account settings after purchase. Any unused portion of a free trial is forfeited when you buy a subscription. Prices are shown in your local currency on the App Store.
+        <br /><br />
+        <a href="terms.html">Terms of Use (EULA)</a> · <a href="privacy.html">Privacy Policy</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section section--tight">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Good questions</span>
+        <h2 class="h-section">Frequently asked</h2>
+      </div>
+      <div class="faq reveal">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span>Does MoneyFly connect to my bank?</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="faq-a"><div class="faq-a-inner">No. MoneyFly never asks for your bank login. Instead, it reads the SMS alerts your bank already sends you — entirely on your device — and turns them into transactions. You can also add anything manually.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span>Where is my data stored?</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="faq-a"><div class="faq-a-inner">Your accounts, transactions and balances are stored and encrypted on your iPhone. The only feature that uses the cloud is Split Wisely — and only when you choose to share a group with other people.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span>Do I need an account to use MoneyFly?</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="faq-a"><div class="faq-a-inner">You can track your own money without any account. An account is only needed for Split Wisely, where expenses are shared with others. You can delete that account at any time from Settings.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span>Is the Zakat calculator a religious ruling?</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="faq-a"><div class="faq-a-inner">No. It's a calculation aid to help you track your Hawl and nisab and estimate your Zakat. It is not a fatwa and does not claim religious authority. For rulings, please consult a qualified scholar.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span>How do I cancel my subscription?</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="faq-a"><div class="faq-a-inner">Subscriptions are handled by Apple. Open the Settings app → your name → Subscriptions → MoneyFly, and choose cancel. You'll keep Pro until the end of the current billing period.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-band reveal">
+        <span class="eyebrow">Get your money in one place</span>
+        <h2 class="h-section" style="margin-top:16px;">Ready for a calmer relationship<br />with your money?</h2>
+        <p class="lead">Download MoneyFly free and see your whole financial life — clearly, privately, in one place.</p>
+        <div class="hero-cta">
+          <a href="https://apps.apple.com/app/moneyfly/id0000000000" class="appstore-badge" aria-label="Download MoneyFly on the App Store">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 12.54c-.02-2.06 1.68-3.05 1.76-3.1-0.96-1.4-2.45-1.6-2.98-1.62-1.27-.13-2.48.75-3.12.75-.64 0-1.64-.73-2.7-.71-1.39.02-2.67.81-3.38 2.05-1.44 2.5-.37 6.2 1.03 8.23.69.99 1.51 2.11 2.58 2.07 1.04-.04 1.43-.67 2.69-.67 1.25 0 1.61.67 2.7.65 1.12-.02 1.82-1.01 2.5-2.01.79-1.15 1.11-2.27 1.13-2.32-.02-.01-2.17-.83-2.19-3.29zM15.0 6.86c.57-.69.95-1.65.85-2.61-.82.03-1.81.55-2.4 1.24-.53.61-.99 1.58-.87 2.51.91.07 1.85-.46 2.42-1.14z"/></svg>
+            <span><span class="small">Download on the</span><span class="big">App Store</span></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand"><img src="assets/icon.png" alt="MoneyFly" /><span>Money<b>Fly</b></span></a>
+          <p>A premium, on-device-first personal finance app for iPhone. Your whole financial life, in one calm place.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Product</h5>
+          <a href="#features">Features</a>
+          <a href="#screens">Screenshots</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#download">Download</a>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <a href="support.html">Support</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Use</a>
+          <a href="delete-account.html">Delete Account</a>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <a href="mailto:ft4dmzrtx2@privaterelay.appleid.com">Email support</a>
+          <a href="support.html#faq">Help &amp; FAQ</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> MoneyFly. All rights reserved.</span>
+        <span class="made">Made with care for the region.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
