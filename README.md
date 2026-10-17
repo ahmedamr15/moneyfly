@@ -65,3 +65,12 @@ Total page weight is ~1.3 MB. Fonts load from Google Fonts (Inter + Fraunces).
 - Fully responsive (375 / 768 / 1024 / 1440), dark-theme, WCAG-minded contrast.
 - Respects `prefers-reduced-motion`.
 - No trackers, no analytics, no cookies — nothing to disclose or consent to.
+
+## Admin console (`admin/`)
+
+Not linked from any public page. Lets the owner change AI providers, models, fallback order and API
+keys for the backend, and see call health. Needs the `ai_routing_config` migration, the
+`admin-api` edge function and an admin account (`supabase/admin/create-admin-user.ts`). Sign in at
+`/admin/` with username `admin`; two-factor (authenticator app) is required. See
+`App map/services/SERVICE-AIRouting.md`. It loads a vendored `supabase-js` from `admin/vendor/`
+and has a strict Content-Security-Policy, so serve it over HTTPS with the files unchanged.
