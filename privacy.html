@@ -66,20 +66,27 @@
       <p>MoneyFly ("we", "our", or "the app") is a personal finance manager for iOS. We built it on-device first, which means your financial life is designed to stay on your iPhone. This policy explains what we collect, how we use it, and the choices and rights you have.</p>
 
       <div class="callout">
-        <p id="summary"><strong>The short version.</strong> Your accounts, transactions, budgets, goals and balances are stored on your device. We don't ask for your bank login, we don't sell your data, and we never use your finances for advertising. The only feature that uses the cloud is Split Wisely, and only when you choose to share expenses with other people.</p>
+        <p id="summary"><strong>The short version.</strong> Your accounts, transactions, budgets, goals and balances are stored on your device. We don't ask for your bank login, we don't sell your data, and we never use your finances for advertising. A few features use the cloud, and only when you use them: Split Wisely (shared expenses), reading bank SMS with AI, scanning receipts, voice entry, and AI chat. For those, the specific text, image or summary involved is sent to our server and to the AI providers listed in section 4. An account is optional — without one, none of that is sent.</p>
       </div>
 
       <h2 id="collect">1. Data we collect</h2>
       <h3>Stored locally on your device only</h3>
       <ul>
         <li>Financial transactions, accounts, credit cards, budgets, goals, savings, gold holdings and Zakat data you enter or import</li>
-        <li>Content of bank SMS messages you choose to let MoneyFly read — parsed on-device to create transactions, never transmitted to us</li>
+        <li>Your ledger itself. It is not synced anywhere automatically — use <strong>Settings → Back up &amp; restore</strong> to export a copy to Files or iCloud Drive</li>
         <li>App preferences and settings</li>
         <li>Subscription status, cached locally to unlock Pro features</li>
       </ul>
-      <h3>Collected only if you use Split Wisely (optional)</h3>
+      <h3>Sent to our server and AI providers when you use these features</h3>
       <ul>
-        <li>An email address and display name used to create your Split Wisely account</li>
+        <li><strong>Bank SMS.</strong> When automatic SMS reading is on, the text of each message you let MoneyFly read is sent to our server and on to an AI model that extracts the amount, merchant and date. Arabic messages are translated on your device where your iPhone supports it. We do not store the message text; the AI provider processes it under its own terms. Messages that don't match one of your saved accounts or cards are ignored before anything is sent.</li>
+        <li><strong>AI chat.</strong> Only after you allow it (Settings → Share data with AI assistant), and only when you send a message, a summary of your accounts, balances, card last-4 digits, transactions with notes, budgets, goals, recurring items and IOU names is sent so the assistant can answer. You can turn this off at any time.</li>
+        <li><strong>Receipt scan and voice entry.</strong> The photo or transcript you submit is sent to our server and an AI provider to extract the transaction.</li>
+        <li><strong>Exchange and gold rates.</strong> Requests for market rates contain no personal or financial data.</li>
+      </ul>
+      <h3>Collected if you create an account (optional)</h3>
+      <ul>
+        <li>An email address and display name used to create your account (needed for Split Wisely, MoneyFly Pro, AI chat and the cloud features above)</li>
         <li>Group and expense data you add to shared groups, which is visible to the other members of those groups</li>
         <li>Basic technical data (such as timestamps) needed to keep shared balances accurate and in sync</li>
       </ul>
@@ -89,7 +96,6 @@
         <li>We do not collect, transmit or store your bank credentials, online-banking passwords or full card numbers</li>
         <li>We do not sell or rent your data to third parties</li>
         <li>We do not use your financial data for advertising or build advertising profiles</li>
-        <li>SMS content is processed entirely on-device and is never sent to our servers</li>
         <li>We do not track you across other apps or websites</li>
       </ul>
 
@@ -105,21 +111,22 @@
       <h2 id="third">4. Third-party services</h2>
       <ul>
         <li><strong>Apple StoreKit</strong> — handles subscription purchases and renewals. Apple processes payment; Apple's privacy policy applies to that processing.</li>
-        <li><strong>Supabase</strong> — used exclusively to power the optional Split Wisely feature. Shared group data is stored on Supabase's EU infrastructure (Frankfurt). See the <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase Privacy Policy</a>.</li>
-        <li><strong>On-device / AI parsing</strong> — voice and SMS transaction parsing runs on-device where possible. No financial data is sent to any AI service without your action, and never silently.</li>
+        <li><strong>Supabase</strong> — hosts your account, Split Wisely groups, subscription status and the server functions that call the AI providers. Data is stored on Supabase's EU infrastructure (Frankfurt). See the <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase Privacy Policy</a>.</li>
+        <li><strong>AI model providers</strong> — to read SMS, receipts and voice, and to power AI chat, our server forwards the relevant text, image or summary to third-party model providers, currently <strong>DeepSeek</strong> and <strong>Groq</strong> (SMS parsing) and <strong>OpenRouter</strong>, which routes to models such as <strong>Google Gemini</strong> (AI chat). Each processes the data under its own privacy terms. We do not send your sign-in credentials or full card numbers.</li>
+        <li><strong>ExchangeRate-API</strong> — supplies currency rates through our server. No personal data is involved.</li>
       </ul>
 
       <h2 id="subs">5. Subscriptions</h2>
       <p>When you purchase a MoneyFly Pro subscription, Apple processes the payment. We record your subscription status (active or expired), linked to an anonymous transaction identifier, solely to verify your entitlement to Pro features. We do not store payment card details. See our <a href="terms.html">Terms of Use</a> for the full subscription terms.</p>
 
       <h2 id="retention">6. Data retention &amp; deletion</h2>
-      <p>All local data is removed when you delete the app from your device. If you created a Split Wisely account, you can delete it at any time directly in the app via <strong>Settings → Delete Account</strong>. This signs you out, deactivates your login and anonymizes your profile so your name no longer appears to other members.</p>
+      <p>All local data is removed when you delete the app from your device, and cannot be recovered unless you exported a backup first. If you created a Split Wisely account, you can delete it at any time directly in the app via <strong>Settings → Delete Account</strong>. This signs you out, deactivates your login and anonymizes your profile so your name no longer appears to other members.</p>
       <div class="callout warn">
         <p>Shared group records you contributed to are retained in an anonymized form (shown as "Deleted user") so that other members' settlement history remains accurate. You may also request deletion by emailing us — we will action verified requests within 30 days. See the <a href="delete-account.html">account deletion page</a> for step-by-step instructions.</p>
       </div>
 
       <h2 id="rights">7. Your rights</h2>
-      <p>Depending on where you live, you may have the right to access, correct, export or delete your personal data, and to object to or restrict certain processing. Because most data never leaves your device, you already control it directly. For data held for Split Wisely, contact us using the details below and we will help you exercise these rights.</p>
+      <p>Depending on where you live, you may have the right to access, correct, export or delete your personal data, and to object to or restrict certain processing. Because your ledger stays on your device, you already control it directly, and you can export it at any time from Settings → Back up &amp; restore. For data held for Split Wisely, contact us using the details below and we will help you exercise these rights.</p>
 
       <h2 id="children">8. Children's privacy</h2>
       <p>MoneyFly is not directed at children under 13, and we do not knowingly collect data from children. If you believe a child has provided us data, please contact us so we can remove it.</p>
