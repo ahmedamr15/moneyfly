@@ -68,9 +68,10 @@ Total page weight is ~1.3 MB. Fonts load from Google Fonts (Inter + Fraunces).
 
 ## Admin console (`admin/`)
 
-Not linked from any public page. Lets the owner change AI providers, models, fallback order and API
-keys for the backend, and see call health. Needs the `ai_routing_config` migration, the
-`admin-api` edge function and an admin account (`supabase/admin/create-admin-user.ts`). Sign in at
-`/admin/` with username `admin`; two-factor (authenticator app) is required. See
-`App map/services/SERVICE-AIRouting.md`. It loads a vendored `supabase-js` from `admin/vendor/`
-and has a strict Content-Security-Policy, so serve it over HTTPS with the files unchanged.
+Not linked from any public page. Controls the backend AI (providers, models, fallbacks, keys, prompts),
+Pro-for-AI grants, usage and cost, server limits, remote app settings, announcements / push messages,
+market-data caching, and administrators. Sign in at `/admin/` with username `admin`; an authenticator app
+code is required. Needs the `ai_routing_config`, `ai_pro_overrides` and `admin_console_v2` migrations and the
+`admin-api` and `app-config` edge functions. See `App map/services/SERVICE-AIRouting.md`.
+Files: `admin.js` (core) plus one script per tab, `admin.css`, and a vendored `supabase-js` in `vendor/`.
+A strict Content-Security-Policy is set in `index.html`, so serve it over HTTPS with the files unchanged.
