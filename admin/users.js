@@ -4,7 +4,7 @@
   const App = window.AdminApp;
   const { api, attempt, toast, icon, esc, when, ago, askConfirm, openModal, closeModal } = App;
 
-  const S = { query: '', results: null, searching: false, grants: [] };
+  const S = { query: '', results: null, searching: false, grants: [], health: null };
 
   // ── Push dialog (also used by the Settings tab for "send to everyone") ────
   App.pushDialog = async function pushDialog({ audience, userId, email, title = '', body = '', url = '' }) {
@@ -25,7 +25,7 @@
     if (!prev) { closeModal(); return; }
     devices = prev.devices;
     note.innerHTML = devices
-      ? icon('info') + ' This will go to <strong>' + devices + ' device' + (devices === 1 ? '' : 's') + '</strong>' + (prev.production ? '' : ' — the server is set to Apple\'s <strong>sandbox</strong>, so only development-build devices will receive it') + '.'
+      ? icon('info') + ' This will go to <strong>' + devices + ' device' + (devices === 1 ? '' : 's') + '</strong> (each on its own Apple environment — development builds via sandbox, TestFlight/App Store via production).'
       : icon('alert') + ' No devices are registered for push' + (everyone ? '' : ' for this account') + '.';
     if (!prev.configured) note.innerHTML += '<br>' + icon('alert') + ' Push is not configured on the server.';
     const refresh = () => { go.disabled = !devices || !prev.configured || (everyone && form.confirm.value.trim() !== 'SEND'); };
@@ -42,6 +42,23 @@
 
   // ── Data ──────────────────────────────────────────────────────────────────
   async function loadGrants() { S.grants = (await api('pro_list')).grants; }
+  async function loadHealth() { S.health = await attempt(() => api('push_health')); }
+
+  function healthPanel() {
+    const h = S.health;
+    if (!h) return '';
+    const day = h.last_24h, week = h.last_7d;
+    const rate = (t) => t.total ? Math.round(100 * (t.byStatus.delivered || 0) / t.total) + '%' : '—';
+    const chips = (o) => Object.keys(o).length
+      ? Object.entries(o).sort((a, b) => b[1] - a[1]).map(([k, v]) => '<span class="badge">' + esc(k) + ' · ' + v + '</span>').join(' ')
+      : '<span class="muted small">none</span>';
+    return '<section class="panel"><header><h3>' + icon('send', 'lg') + 'Push delivery</h3><span class="muted small">Split Wisely pushes and announcements</span></header><div class="body stack">' +
+      (h.configured ? '' : '<p>' + icon('alert') + ' Push is not configured on the server.</p>') +
+      '<div class="small">Registered devices: <strong>' + h.devices + '</strong> · Undelivered in the last 24 h (retried automatically): <strong>' + h.pending_24h + '</strong></div>' +
+      '<div class="small">Last 24 h: <strong>' + day.total + '</strong> sends, delivered ' + rate(day) + ' · Last 7 days: <strong>' + week.total + '</strong> sends, delivered ' + rate(week) + '</div>' +
+      '<div class="small">Outcomes (7 d): ' + chips(week.byStatus) + '</div>' +
+      '<div class="small">Apple rejection reasons (7 d): ' + chips(week.reasons) + '</div></div></section>';
+  }
 
   async function search(q) {
     S.query = q;
@@ -87,7 +104,8 @@
       '<label class="field grow"><span>Email (start of it is enough)</span><input name="q" type="text" value="' + esc(S.query) + '" placeholder="name@example.com" autocomplete="off" spellcheck="false"></label>' +
       '<button class="btn primary" type="submit"' + (S.searching ? ' disabled' : '') + '>' + (S.searching ? icon('loader', 'spin') + 'Searching…' : icon('search') + 'Search') + '</button></form>' +
       '<div style="margin-top:16px">' + results + '</div></div></section>' +
-      '<section class="panel"><header><h3>' + icon('shield', 'lg') + 'Accounts with a Pro-AI grant</h3><span class="muted small">Testers, App Review demo accounts, comped users</span></header>' + grants + '</section>';
+      '<section class="panel"><header><h3>' + icon('shield', 'lg') + 'Accounts with a Pro-AI grant</h3><span class="muted small">Testers, App Review demo accounts, comped users</span></header>' + grants + '</section>' +
+      healthPanel();
   }
 
   // ── Actions ───────────────────────────────────────────────────────────────
@@ -130,8 +148,8 @@
 
   App.register('users', {
     title: 'Users',
-    async load() { await loadGrants(); },
+    async load() { await Promise.all([loadGrants(), loadHealth()]); },
     render, click, submit,
-    reset() { S.results = null; S.grants = []; S.query = ''; },
+    reset() { S.results = null; S.grants = []; S.query = ''; S.health = null; },
   });
 })();
